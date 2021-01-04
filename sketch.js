@@ -81,7 +81,7 @@ function draw() {
    Matter.Body.setStatic( packageBody , true);
   }
   if(keyCode === LEFT_ARROW){
-    Sprite.setStatic(helicopter , false);
+    Sprite.setStatic(helicopterSprite , false);
 	helicopterSprite.y = helicopterBody.position.y;
 	helicopterSprite.x = helicopterBody.position.x;
 	
