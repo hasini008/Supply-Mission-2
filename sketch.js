@@ -76,9 +76,11 @@ function draw() {
   packageSprite.y= packageBody.position.y 
  
   if(keyCode === DOWN_ARROW){
-   
+   push();
+   translate( 0 , 20);
    Body.setStatic(packageBody , false);
    Matter.Body.setStatic( packageBody , true);
+   pop();
   }
   if(keyCode === LEFT_ARROW){
     Sprite.setStatic(helicopterSprite , false);
