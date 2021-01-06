@@ -19,6 +19,7 @@ function setup() {
 	packageSprite=createSprite(width/2, 80, 10,10);
 	packageSprite.addImage(packageIMG)
 	packageSprite.scale=0.2
+	restituition = 0.5;
 
 	helicopterSprite=createSprite(width/2, 200, 10,10);
 	helicopterSprite.addImage(helicopterIMG)
@@ -76,20 +77,13 @@ function draw() {
   packageSprite.y= packageBody.position.y 
  
   if(keyCode === DOWN_ARROW){
-   push();
-   translate( 0 , 20);
-   Body.setStatic(packageBody , false);
-   Matter.Body.setStatic( packageBody , true);
-   pop();
+   Matter.Body.setStatic( packageBody , false );  
   }
   if(keyCode === LEFT_ARROW){
-    Sprite.setStatic(helicopterSprite , false);
-	helicopterSprite.y = helicopterBody.position.y;
-	helicopterSprite.x = helicopterBody.position.x;
-	
+    push();
+   displacement = { x= -1 ; y = 0};
+   Matter.Body.translate( helicopterSprite , { x= -1 ; y = 0});
+   pop();	
   }
   drawSprites();
-  
-  
- 
 }
