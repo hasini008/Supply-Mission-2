@@ -80,10 +80,10 @@ function draw() {
    Matter.Body.setStatic( packageBody , false );  
   }
   if(keyCode === LEFT_ARROW){
-    push();
+    
    displacement = { x= -1 ; y = 0};
    Matter.Body.translate( helicopterSprite , { x= -1 ; y = 0});
-   pop();	
+  
   }
   drawSprites();
 }
